@@ -1,11 +1,11 @@
 # PYTHON_SQL_P3_WALMART
 Data Analysis Project 3  (Python) (SQL)
 
-# 1. Background and Objective
+## 1. Background and Objective
 This project builds a complete data analytics workflow—from pulling real-world data using the Kaggle API, preprocessing and performing EDA in Python, to solving business problems using SQL.
 We work with the Walmart 10K Sales dataset, analyze it in Python, and load it into MySQL/PostgreSQL for deeper query-based insights.
 
-🔍 Project Background
+### 🔍 Project Background
 Modern retail businesses generate vast amounts of data. This project simulates a scenario where a data analyst is tasked with preparing and analyzing sales data from Walmart to derive actionable business insights.
 📊 Insights and recommendations are derived across:
 •	Sales Trends Analysis
@@ -14,7 +14,7 @@ Modern retail businesses generate vast amounts of data. This project simulates a
 •	Customer behavior
 •	 payment preferences
 
-🎯 Objective
+### 🎯 Objective
 To build an end-to-end data analytics pipeline using Python and SQL:
 •	data extraction using Kaggle API
 •	Clean and transform the data
@@ -23,11 +23,11 @@ To build an end-to-end data analytics pipeline using Python and SQL:
 •	Prepare and publish the project with full documentation
 
 
-# 2. Problem Statement   
+## 2. Problem Statement   
 The business collects large volumes of sales and customer data across branches, cities, and categories, but key insights remain hidden. This analysis aims to uncover patterns in payment methods, sales performance, customer ratings, profitability, and revenue trends over time, while also addressing city-level behavior, branch comparisons, and data integrity issues.
 
 
-# 3. AIMS Grid
+## 3. AIMS Grid
 Aim:  Understand sales trends, performance, and customer behavior
 Inputs: Walmart sales dataset from Kaggle (~10K rows)
 Mechanism:	Python (EDA) → MySQL (Advance Analytics)
