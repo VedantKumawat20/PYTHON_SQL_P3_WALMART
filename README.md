@@ -109,7 +109,7 @@ In this final step, the cleaned and transformed data is loaded into a persistent
 
 🧠 9. SQL Analysis & Business Problem Solving  ( ADVANCE ANALYSIS )
 
-- 🔄 Change-over-Time Analysis
+- **Change-over-Time Analysis**
 (Deals with trends, growth, increases/decreases across time)<BR>
 
 Q8: Identify the 5 branches with the highest revenue decrease/increase ratio from 2022 → 2023<BR>
@@ -120,12 +120,12 @@ Q13: Moving Average of Daily Sales (7-day window) (Smoothing daily fluctuation t
 Q18: Total revenue from sales — all cities, quarter-wise and year-wise<BR>
 Q20: Monthly sales growth — with percentage change<BR>
 
-- 📈 Cumulative Analysis
+- **Cumulative Analysis**
 (Tracking totals or running sums over time/entities)<BR>
 
 Q14: Cumulative Customer Count by City
 
-- ⚡ Performance Analysis
+- **Performance Analysis**
 (Comparing efficiency, profitability, quality, highs/lows, etc.)<BR>
 
 Q2: Identify the highest-rated category in each branch + highest-rated overall<BR>
@@ -139,12 +139,12 @@ Q15: High vs Low-Rated Transactions<BR>
 Q17: Revenue vs Profit Margin Matrix (Branch × Category)<BR>
 Q19: Each city – avg sale per customer & avg rating per customer<BR>
 
-- 🥧 Part-to-Whole Analysis
+- **Part-to-Whole Analysis**
 (How pieces contribute to totals — proportions, shares, breakdowns)<BR>
 
 Q1: Find different payment methods, number of transactions, and quantity sold by payment method<BR>
 
-- 🧩 Data Segmentation
+- **Data Segmentation**
 (Slicing data into groups like city, branch, category, etc.)<BR>
 
 Q7: Categorize sales into Morning, Afternoon, and Evening shifts<BR>
@@ -152,7 +152,7 @@ Q11: Top 5 cities with most orders in last 30 days<BR>
 Q12: Finding duplicates — cities are 98 but branches are 100<BR>
 Q21: Unique customer count per city<BR>
 
-- 📝 Reporting
+- **Reporting**
 (Predefined summaries for business users)<BR>
 
 Q16: Monthly Report Summary<BR>
