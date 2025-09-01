@@ -127,25 +127,16 @@ Q14: Cumulative Customer Count by City
 
 - ⚡ Performance Analysis
 (Comparing efficiency, profitability, quality, highs/lows, etc.)
-Q2: Identify the highest-rated category in each branch + highest-rated overall
-
-Q2.2: Highest-rated category count
-
-Q3: Identify the busiest day for each branch based on number of transactions
-
-Q4: Average, minimum, and maximum rating of categories for each city
-
-Q5: Total profit for each category (ordered highest → lowest)
-
-Q6: Most common payment method for each branch
-
-Q10 & Q10.2 (also fit here since they evaluate max/min performance across time)
-
-Q15: High vs Low-Rated Transactions
-
-Q17: Revenue vs Profit Margin Matrix (Branch × Category)
-
-Q19: Each city – avg sale per customer & avg rating per customer
+Q2: Identify the highest-rated category in each branch + highest-rated overall<BR>
+Q2.2: Highest-rated category count<BR>
+Q3: Identify the busiest day for each branch based on number of transactions<BR>
+Q4: Average, minimum, and maximum rating of categories for each city<BR>
+Q5: Total profit for each category (ordered highest → lowest)<BR>
+Q6: Most common payment method for each branch<BR>
+Q10 & Q10.2 (also fit here since they evaluate max/min performance across time)<BR>
+Q15: High vs Low-Rated Transactions<BR>
+Q17: Revenue vs Profit Margin Matrix (Branch × Category)<BR>
+Q19: Each city – avg sale per customer & avg rating per customer<BR>
 
 - 🥧 Part-to-Whole Analysis
 (How pieces contribute to totals — proportions, shares, breakdowns)
