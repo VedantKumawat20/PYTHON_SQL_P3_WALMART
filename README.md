@@ -110,7 +110,7 @@ In this final step, the cleaned and transformed data is loaded into a persistent
 
 ## 8. SQL Analysis & Business Problem Solving  ( ADVANCE ANALYSIS )
 
-### **Change-over-Time Analysis**
+### **Change-over-Time Analysis** <br>
 (Deals with trends, growth, increases/decreases across time)<BR>
 
 Q8: Identify the 5 branches with the highest revenue decrease/increase ratio from 2022 → 2023<BR>
