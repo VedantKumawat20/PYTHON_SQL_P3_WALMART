@@ -1,2 +1,94 @@
 # PYTHON_SQL_P3_WALMART
 Data Analysis Project 3  (Python) (SQL)
+
+# 📌 1. Background and Overview
+This project builds a complete data analytics workflow—from pulling real-world data using the Kaggle API, preprocessing and performing EDA in Python, to solving business problems using SQL.
+We work with the Walmart 10K Sales dataset, analyze it in Python, and load it into MySQL/PostgreSQL for deeper query-based insights.
+
+🔍 Project Background
+Modern retail businesses generate vast amounts of data. This project simulates a scenario where a data analyst is tasked with preparing and analyzing sales data from Walmart to derive actionable business insights.
+📊 Insights and recommendations are derived across:
+•	Sales Trends Analysis
+•	Product-level performance   / category level performance
+•	Regional performance comparisons
+•	Customer behavior
+•	 payment preferences
+
+🎯 Objective
+To build an end-to-end data analytics pipeline using Python and SQL:
+•	data extraction using Kaggle API
+•	Clean and transform the data
+•	Load into SQL databases
+•	Solve critical business problems with SQL -- The goal is to deliver actionable insights that support growth, efficiency, and data-driven decision-making.
+•	Prepare and publish the project with full documentation
+
+# 🗂 2. Problem Statement   
+The business collects large volumes of sales and customer data across branches, cities, and categories, but key insights remain hidden. This analysis aims to uncover patterns in payment methods, sales performance, customer ratings, profitability, and revenue trends over time, while also addressing city-level behavior, branch comparisons, and data integrity issues.
+
+
+
+🧠 3. AIMS Grid
+Aim:  Understand sales trends, performance, and customer behavior
+Inputs: Walmart sales dataset from Kaggle (~10K rows)
+Mechanism:	Python (EDA) → MySQL (Advance Analytics)
+Success:	Business questions answered with clear insights and documentation
+
+🔗 4. Data Sources
+•	Dataset: Kaggle - Walmart 10K Sales Dataset
+•	Downloaded using: kaggle.exe datasets download -d najir0123/walmart-10k-sales-datasets
+•	File: Walmart.csv (~10,000 rows)
+
+🧰 5. Tools and Libraries
+Python Environment:
+•	Jupyter Notebook / VS Code
+•	Python 3.8+
+•	Libraries:
+o	pandas
+o	sqlalchemy
+o	pymysql
+o	kaggle (API)
+RDBMS/ database:
+•	MySQL
+
+
+⚙️ 6. ELT Pipeline (Extract, Load, Transform)
+
+🧩 Step-by-Step
+1.	Extract → via Kaggle API
+2.	Load → Unzip + load into Pandas
+3.	Transform → Cleaning + Feature Engineering
+
+
+
+
+1. Extract & Load
+This phase involves setting up the environment and retrieving the raw data.
+Objective: To pull the raw data from its source into a working environment.
+in terminal writing to  download dataset – 
+kaggle datasets download -d najir0123/walmart-10k-sales-datasets 
+error : kaggle : The term 'kaggle' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again. 
+Solved -- kaggle.exe datasets download -d najir0123/walmart-10k-sales-datasets
+
+•	Environment Setup: The process begins by configuring the system to allow script execution ('Set-ExecutionPolicy -Scope CurrentUser Unrestricted'), installing necessary tools like Jupyter Notebook and the Kaggle library, and troubleshooting command-line errors (e.g., using kaggle.exe instead of kaggle).
+•	Data Retrieval: The Kaggle API is used to download the walmart-10k-sales-datasets dataset. The raw Walmart sales data, in a CSV file named Walmart.csv, is then loaded into a pandas DataFrame in a Jupyter Notebook in VS code. This initial load brings the data into the working memory of the Python environment.
+•	df = pd.read_csv('Walmart.csv', encoding_errors='ignore') is used to read the file, with the encoding_errors parameter set to 'ignore' to prevent errors from un-decodable characters.
+________________________________________
+2. Transform
+This is the core data cleaning and preprocessing stage, performed within the pandas DataFrame.
+•  Objective: To clean the data by handling missing values, duplicates, and incorrect data types, and to create new features for analysis.
+•	Data Exploration: Initial checks are performed using df.shape, df.head(), df.describe(), and df.info() to understand the data's structure, identify missing values, duplicates, and incorrect data types.
+Process:
+•	Duplicate Handling: The df.duplicated().sum() command identifies 51 duplicate rows. These duplicates are removed using df.drop_duplicates(inplace=True), which updates the DataFrame directly.
+•	Missing Value Handling: df.isnull().sum() is used to count missing values. Rows with missing data are dropped with df.dropna(inplace=True). This action reduces the total number of rows from 10,000 to 9,969.
+•	Data Type Conversion: The unit_price column is initially of an object data type because it contains the $ symbol. To perform calculations, this column needs to be converted to a numerical type. The $ symbol is removed using df['unit_price'].str.replace('$', '') and then the column is converted to a float64 data type using .astype(float).
+•	Feature Engineering: A new column named total is created by multiplying the unit_price and quantity columns (df['total'] = df['unit_price'] * df['quantity']). This new column represents the total amount of each transaction and is crucial for sales analysis.
+•	Final Check: The df.info() and df.shape commands are used to verify that the transformations were successful, confirming that data types are correct and no more duplicates or missing values exist.
+________________________________________
+3. Load (Final)
+In this final step, the cleaned and transformed data is loaded into a persistent storage system for long-term use and analysis.
+Objective: To export the cleaned and transformed data from the Python environment into a relational database for further analysis using SQL.
+Process:
+1.	Dependencies: The pymysql and SQLAlchemy libraries are imported. pymysql acts as an adapter, while SQLAlchemy's create_engine function provides a standardized way to connect to a MySQL database.
+2.	Database Connection: A connection engine is created to link Python to the MySQL database. The connection string is formatted as mysql+pymysql://<username>:<password>@<host>:<port>/<database>. Special characters in the password, like @, must be URL-encoded (%40).
+3.	•  Data Loading: The df.to_sql() method is used to export the DataFrame to a SQL table. The parameters name='walmart', con=engine_mysql, and if_exists='append' are specified. This command creates a new table named walmart in the MySQL database and populates it with the cleaned data.
+4.	•  Final Export: As a final step, the cleaned data is also saved to a local CSV file named walmart_clean_data.csv using df.to_csv('walmart_clean_data.csv', index=False) as a backup.
