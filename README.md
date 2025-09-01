@@ -69,7 +69,7 @@ kaggle datasets download -d najir0123/walmart-10k-sales-datasets
 error : kaggle : The term 'kaggle' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again. 
 Solved -- kaggle.exe datasets download -d najir0123/walmart-10k-sales-datasets
 
-•	Environment Setup: The process begins by configuring the system to allow script execution ('Set-ExecutionPolicy -Scope CurrentUser Unrestricted'), installing necessary tools like Jupyter Notebook and the Kaggle library, and troubleshooting command-line errors (e.g., using kaggle.exe instead of kaggle).
+•	Environment Setup: The process begins by configuring the system to allow script execution (`Set-ExecutionPolicy -Scope CurrentUser Unrestricted`), installing necessary tools like Jupyter Notebook and the Kaggle library, and troubleshooting command-line errors (e.g., using kaggle.exe instead of kaggle).
 •	Data Retrieval: The Kaggle API is used to download the walmart-10k-sales-datasets dataset. The raw Walmart sales data, in a CSV file named Walmart.csv, is then loaded into a pandas DataFrame in a Jupyter Notebook in VS code. This initial load brings the data into the working memory of the Python environment.
 •	df = pd.read_csv('Walmart.csv', encoding_errors='ignore') is used to read the file, with the encoding_errors parameter set to 'ignore' to prevent errors from un-decodable characters.
 ________________________________________
