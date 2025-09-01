@@ -59,9 +59,8 @@ RDBMS/ database:
 3.	Transform → Cleaning + Feature Engineering
 <br>
 ## 1. Extract & Load
-
 This phase involves setting up the environment and retrieving the raw data.
-### • Objective: To pull the raw data from its source into a working environment.
+### • Objective: ### To pull the raw data from its source into a working environment.
 in terminal writing to download dataset –-  `kaggle datasets download -d najir0123/walmart-10k-sales-datasets` 
 error : kaggle : The term 'kaggle' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again. 
 Solved -- `kaggle.exe datasets download -d najir0123/walmart-10k-sales-datasets`
