@@ -63,12 +63,12 @@ RDBMS/ database:
 
 This phase involves setting up the environment and retrieving the raw data.
 
- • Objective: To pull the raw data from its source into a working environment.
+**• Objective:** To pull the raw data from its source into a working environment.
   - In terminal writing to download dataset –-  `kaggle datasets download -d najir0123/walmart-10k-sales-datasets` 
   - error : kaggle : The term 'kaggle' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again. 
   - Solved: `kaggle.exe datasets download -d najir0123/walmart-10k-sales-datasets`<br>
 
-• Environment Setup: The process begins by configuring the system to allow script execution (`Set-ExecutionPolicy -Scope CurrentUser Unrestricted`), installing necessary tools like Jupyter Notebook and the Kaggle library, and troubleshooting command-line errors (e.g., using `kaggle.exe` instead of `kaggle`).<br>
+**• Environment Setup:** The process begins by configuring the system to allow script execution (`Set-ExecutionPolicy -Scope CurrentUser Unrestricted`), installing necessary tools like Jupyter Notebook and the Kaggle library, and troubleshooting command-line errors (e.g., using `kaggle.exe` instead of `kaggle`).<br>
 
 • Data Retrieval: The Kaggle API is used to download the `walmart-10k-sales-datasets` dataset. The raw Walmart sales data, in a CSV file named Walmart.csv, is then loaded into a pandas DataFrame in a Jupyter Notebook in VS code. This initial load brings the data into the working memory of the Python environment.<br>
 
