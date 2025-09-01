@@ -110,7 +110,8 @@ In this final step, the cleaned and transformed data is loaded into a persistent
 
 ## 8. SQL Analysis & Business Problem Solving  ( ADVANCE ANALYSIS )
 
-### **Change-over-Time Analysis** (Deals with trends, growth, increases/decreases across time)<BR>
+### **Change-over-Time Analysis**<br>
+(Deals with trends, growth, increases/decreases across time)<BR>
 
 Q8: Identify the 5 branches with the highest revenue decrease/increase ratio from 2022 → 2023<BR>
 Q9: Total revenue in each year and month (Year-on-year and month-on-month revenue trends)<BR>
@@ -120,7 +121,7 @@ Q13: Moving Average of Daily Sales (7-day window) (Smoothing daily fluctuation t
 Q18: Total revenue from sales — all cities, quarter-wise and year-wise<BR>
 Q20: Monthly sales growth — with percentage change<BR>
 
-### **Cumulative Analysis**
+### **Cumulative Analysis**<br>
 (Tracking totals or running sums over time/entities)<BR>
 
 Q14: Cumulative Customer Count by City
