@@ -1,6 +1,21 @@
 # PYTHON_SQL_P3_WALMART
 Data Analysis Project 3  (Python) (SQL)
 
+
+## 📑 Table of Contents
+
+1. [Background and Objective](#1-background-and-objective)  
+2. [Problem Statement](#2-problem-statement)  
+3. [AIMS Grid](#3-aims-grid)  
+4. [Data Sources](#4-data-sources)  
+5. [Tools and Libraries](#5-tools-and-libraries)  
+6. [ELT Pipeline (Extract, Load, Transform)](#6-elt-pipeline-extract-load-transform)  
+7. [Data Structure Overview](#7-data-structure-overview)  
+8. [SQL Analysis & Business Problem Solving (Advance Analysis)](#8-sql-analysis--business-problem-solving-advance-analysis)  
+9. [Limitations](#9-limitations)  
+10. [Future Enhancements](#10-future-enhancements)  
+
+
 ## 1. Background and Objective
 - This project builds a complete data analytics workflow—from pulling real-world data using the Kaggle API, preprocessing and performing EDA in Python, to solving business problems using SQL.<br>
 - We work with the Walmart 10K Sales dataset, analyze it in Python, and load it into MySQL/PostgreSQL for deeper query-based insights.<br>
