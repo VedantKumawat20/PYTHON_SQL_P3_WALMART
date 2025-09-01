@@ -83,7 +83,7 @@ This is the core data cleaning and preprocessing stage, performed within the pan
 
 - **Data Exploration:** Initial checks are performed using `df.shape`, `df.head()`, `df.describe()`, and `df.info()` to understand the data's structure, identify missing values, duplicates, and incorrect data types.<br>
 
-- **Process:**
+- **Process:**<br>
   • Duplicate Handling:  The `df.duplicated().sum()` command identifies 51 duplicate rows. These duplicates are removed using `df.drop_duplicates(inplace=True)`, which updates the DataFrame directly.<br>
   •	Missing Value Handling:  `df.isnull().sum()` is used to count missing values. Rows with missing data are dropped with `df.dropna(inplace=True)`. This action reduces the total number of rows from 10,000 to 9,969.<br>
   •	Data Type Conversion:  The unit_price column is initially of an object data type because it contains the $ symbol. To perform calculations, this column needs to be converted to a numerical type. The $ symbol is removed using `df['unit_price'].str.replace('$', '')` and then the column is converted to a float64 data type using `.astype(float)`.<br>
@@ -96,7 +96,7 @@ In this final step, the cleaned and transformed data is loaded into a persistent
 
 - **Objective:** To export the cleaned and transformed data from the Python environment into a relational database for further analysis using SQL.<br>
 
-- **Process:**
+- **Process:**<br>
   • Dependencies:  The pymysql and SQLAlchemy libraries are imported. pymysql acts as an adapter, while SQLAlchemy's create_engine function provides a standardized way to connect to a MySQL database.<br>
   • Database Connection:  A connection engine is created to link Python to the MySQL database. The connection string is formatted as `mysql+pymysql://<username>:<password>@<host>:<port>/<database>`. Special characters in the password, like @, must be URL-encoded (%40).<br>
   • Data Loading:  The `df.to_sql()` method is used to export the DataFrame to a SQL table. The parameters `name='walmart'`, `con=engine_mysql`, and `if_exists='append'` are specified. This command creates a new table named walmart in the MySQL database and populates it with the cleaned data.<br>
@@ -110,7 +110,7 @@ In this final step, the cleaned and transformed data is loaded into a persistent
 
 ## 8. SQL Analysis & Business Problem Solving  ( ADVANCE ANALYSIS )
 
-- **Change-over-Time Analysis**
+### **Change-over-Time Analysis**
 (Deals with trends, growth, increases/decreases across time)<BR>
 
 Q8: Identify the 5 branches with the highest revenue decrease/increase ratio from 2022 → 2023<BR>
@@ -121,12 +121,12 @@ Q13: Moving Average of Daily Sales (7-day window) (Smoothing daily fluctuation t
 Q18: Total revenue from sales — all cities, quarter-wise and year-wise<BR>
 Q20: Monthly sales growth — with percentage change<BR>
 
-- **Cumulative Analysis**
+### **Cumulative Analysis**
 (Tracking totals or running sums over time/entities)<BR>
 
 Q14: Cumulative Customer Count by City
 
-- **Performance Analysis**<br>
+### **Performance Analysis**<br>
 (Comparing efficiency, profitability, quality, highs/lows, etc.)<BR>
 
 Q2: Identify the highest-rated category in each branch + highest-rated overall<BR>
@@ -140,12 +140,12 @@ Q15: High vs Low-Rated Transactions<BR>
 Q17: Revenue vs Profit Margin Matrix (Branch × Category)<BR>
 Q19: Each city – avg sale per customer & avg rating per customer<BR>
 
-- **Part-to-Whole Analysis**<br>
+### **Part-to-Whole Analysis**<br>
 (How pieces contribute to totals — proportions, shares, breakdowns)<BR>
 
 Q1: Find different payment methods, number of transactions, and quantity sold by payment method<BR>
 
-- **Data Segmentation**<br>
+### **Data Segmentation**<br>
 (Slicing data into groups like city, branch, category, etc.)<BR>
 
 Q7: Categorize sales into Morning, Afternoon, and Evening shifts<BR>
@@ -153,7 +153,7 @@ Q11: Top 5 cities with most orders in last 30 days<BR>
 Q12: Finding duplicates — cities are 98 but branches are 100<BR>
 Q21: Unique customer count per city<BR>
 
-- **Reporting**<br>
+### **Reporting**<br>
 (Predefined summaries for business users)<BR>
 
 Q16: Monthly Report Summary<BR>
