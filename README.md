@@ -8,19 +8,19 @@ We work with the Walmart 10K Sales dataset, analyze it in Python, and load it in
 ### 🔍 Project Background
 Modern retail businesses generate vast amounts of data. This project simulates a scenario where a data analyst is tasked with preparing and analyzing sales data from Walmart to derive actionable business insights.<br>
 📊 Insights and recommendations are derived across:<br>
-•	Sales Trends Analysis
-•	Product-level performance   / category level performance
-•	Regional performance comparisons
-•	Customer behavior
-•	 payment preferences
+•	Sales Trends Analysis<br>
+•	Category level performance<br>
+•	Regional performance comparisons<br>
+•	Customer behavior<br>
+•	 payment preferences<br>
 
 ### 🎯 Objective
 To build an end-to-end data analytics pipeline using Python and SQL:<br>
-•	data extraction using Kaggle API
-•	Clean and transform the data
-•	Load into SQL databases
-•	Solve critical business problems with SQL -- The goal is to deliver actionable insights that support growth, efficiency, and data-driven decision-making.
-•	Prepare and publish the project with full documentation
+•	data extraction using Kaggle API<br>
+•	Clean and transform the data<br>
+•	Load into SQL databases<br>
+•	Solve critical business problems with SQL -- The goal is to deliver actionable insights that support growth, efficiency, and data-driven decision-making.<br>
+•	Prepare and publish the project with full documentation<br>
 
 
 ## 2. Problem Statement   
@@ -28,10 +28,10 @@ The business collects large volumes of sales and customer data across branches, 
 
 
 ## 3. AIMS Grid
-Aim:  Understand sales trends, performance, and customer behavior
-Inputs: Walmart sales dataset from Kaggle (~10K rows)
-Mechanism:	Python (EDA) → MySQL (Advance Analytics)
-Success:	Business questions answered with clear insights and documentation
+Aim:  Understand sales trends, performance, and customer behavior<br>
+Inputs: Walmart sales dataset from Kaggle (~10K rows)<br>
+Mechanism:	Python (EDA) → MySQL (Advance Analytics)<br>
+Success:	Business questions answered with clear insights and documentation<br>
 
 
 # 4. Data Sources
