@@ -2,12 +2,12 @@
 Data Analysis Project 3  (Python) (SQL)
 
 ## 1. Background and Objective
-This project builds a complete data analytics workflow—from pulling real-world data using the Kaggle API, preprocessing and performing EDA in Python, to solving business problems using SQL.
-We work with the Walmart 10K Sales dataset, analyze it in Python, and load it into MySQL/PostgreSQL for deeper query-based insights.
+This project builds a complete data analytics workflow—from pulling real-world data using the Kaggle API, preprocessing and performing EDA in Python, to solving business problems using SQL.<br>
+We work with the Walmart 10K Sales dataset, analyze it in Python, and load it into MySQL/PostgreSQL for deeper query-based insights.<br>
 
 ### 🔍 Project Background
-Modern retail businesses generate vast amounts of data. This project simulates a scenario where a data analyst is tasked with preparing and analyzing sales data from Walmart to derive actionable business insights.
-📊 Insights and recommendations are derived across:
+Modern retail businesses generate vast amounts of data. This project simulates a scenario where a data analyst is tasked with preparing and analyzing sales data from Walmart to derive actionable business insights.<br>
+📊 Insights and recommendations are derived across:<br>
 •	Sales Trends Analysis
 •	Product-level performance   / category level performance
 •	Regional performance comparisons
@@ -15,7 +15,7 @@ Modern retail businesses generate vast amounts of data. This project simulates a
 •	 payment preferences
 
 ### 🎯 Objective
-To build an end-to-end data analytics pipeline using Python and SQL:
+To build an end-to-end data analytics pipeline using Python and SQL:<br>
 •	data extraction using Kaggle API
 •	Clean and transform the data
 •	Load into SQL databases
@@ -24,7 +24,7 @@ To build an end-to-end data analytics pipeline using Python and SQL:
 
 
 ## 2. Problem Statement   
-The business collects large volumes of sales and customer data across branches, cities, and categories, but key insights remain hidden. This analysis aims to uncover patterns in payment methods, sales performance, customer ratings, profitability, and revenue trends over time, while also addressing city-level behavior, branch comparisons, and data integrity issues.
+The business collects large volumes of sales and customer data across branches, cities, and categories, but key insights remain hidden. This analysis aims to uncover patterns in payment methods, sales performance, customer ratings, profitability, and revenue trends over time, while also addressing city-level behavior, branch comparisons, and data integrity issues.<br>
 
 
 ## 3. AIMS Grid
