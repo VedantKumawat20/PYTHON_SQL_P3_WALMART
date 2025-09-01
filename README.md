@@ -34,36 +34,35 @@ Mechanism:	Python (EDA) → MySQL (Advance Analytics)<br>
 Success:	Business questions answered with clear insights and documentation<br>
 
 
-# 4. Data Sources
-•	Dataset: Kaggle - Walmart 10K Sales Dataset
-•	Downloaded using: kaggle.exe datasets download -d najir0123/walmart-10k-sales-datasets
-•	File: Walmart.csv (~10,000 rows)
+## 4. Data Sources
+•	Dataset: Kaggle - Walmart 10K Sales Dataset<br>
+•	Downloaded using: kaggle.exe datasets download -d najir0123/walmart-10k-sales-datasets<br>
+•	File: Walmart.csv (~10,000 rows)<br>
 
 
-# 5. Tools and Libraries
-Python Environment:
-•	Jupyter Notebook / VS Code
-•	Python 3.8+
-•	Libraries:
-o	pandas
-o	sqlalchemy
-o	pymysql
-o	kaggle (API)
-RDBMS/ database:
+## 5. Tools and Libraries
+### Python Environment:<br>
+•	Jupyter Notebook / VS Code<br>
+•	Python 3.8+<br>
+•	Libraries:<br>
+  - pandas<br>
+  - sqlalchemy<br>
+  - pymysql<br>
+  - kaggle (API)<br>
+### RDBMS/ database:<br>
 •	MySQL
 
 
-# 6. ELT Pipeline (Extract, Load, Transform)
+## 6. ELT Pipeline (Extract, Load, Transform)
 
-Step-by-Step
-1.	Extract → via Kaggle API
-2.	Load → Unzip + load into Pandas
-3.	Transform → Cleaning + Feature Engineering
-<br>
+### Step-by-Step<br>
+  1.	Extract → via Kaggle API<br>
+  2.	Load → Unzip + load into Pandas<br>
+  3.	Transform → Cleaning + Feature Engineering<br>
 
-1. Extract & Load
+### 1. Extract & Load
 
-This phase involves setting up the environment and retrieving the raw data.
+This phase involves setting up the environment and retrieving the raw data.<br>
 
 **• Objective:** To pull the raw data from its source into a working environment.
   - In terminal writing to download dataset –-  `kaggle datasets download -d najir0123/walmart-10k-sales-datasets` 
@@ -76,7 +75,7 @@ This phase involves setting up the environment and retrieving the raw data.
 
 • `df = pd.read_csv('Walmart.csv', encoding_errors='ignore')` is used to read the file, with the `encoding_errors` parameter set to `'ignore'` to prevent errors from un-decodable characters.<br>
 ________________________________________
-2. Transform
+### 2. Transform
    
 This is the core data cleaning and preprocessing stage, performed within the pandas DataFrame.<br>
 
@@ -91,7 +90,7 @@ This is the core data cleaning and preprocessing stage, performed within the pan
   -	Feature Engineering:  A new column named total is created by multiplying the unit_price and quantity columns `(df['total'] = df['unit_price'] * df['quantity'])`. This new column represents the total amount of each transaction and is crucial for sales analysis.<br>
   -	Final Check:  The `df.info()` and `df.shape` commands are used to verify that the transformations were successful, confirming that data types are correct and no more duplicates or missing values exist.<br>
 ________________________________________
-3. Load (Final)
+### 3. Load (Final)
    
 In this final step, the cleaned and transformed data is loaded into a persistent storage system for long-term use and analysis.<br>
 
@@ -104,12 +103,12 @@ In this final step, the cleaned and transformed data is loaded into a persistent
   - Final Export:  As a final step, the cleaned data is also saved to a local CSV file named walmart_clean_data.csv using `df.to_csv('walmart_clean_data.csv', index=False)` as a backup.<br>
 
 
-# 7. Data Structure Overview
+## 7. Data Structure Overview
 <br>
 <img width="227" height="374" alt="image" src="https://github.com/user-attachments/assets/685e6dd3-e018-48e6-bc77-9ebc3b90e3b0" />
 
 
-# 8. SQL Analysis & Business Problem Solving  ( ADVANCE ANALYSIS )
+## 8. SQL Analysis & Business Problem Solving  ( ADVANCE ANALYSIS )
 
 - **Change-over-Time Analysis**
 (Deals with trends, growth, increases/decreases across time)<BR>
@@ -160,17 +159,17 @@ Q21: Unique customer count per city<BR>
 Q16: Monthly Report Summary<BR>
 
 
-# 9. Limitations
-•	Data lacks timestamp granularity (no hour/minute info)
-•	Only 10,000 rows — not scalable for predictive modeling
-•	Missing customer demographic fields
-•	2019 data missing. Only 3 months data. 1st 3 or last 3
+## 9. Limitations
+•	Data lacks timestamp granularity (no hour/minute info)<br>
+•	Only 10,000 rows — not scalable for predictive modeling<br>
+•	Missing customer demographic fields<br>
+•	2019 data missing. Only 3 months data. 1st 3 or last 3<br>
 
 
-# 10.Future Enhancements
-•	Build Power BI/Tableau dashboards for visualization
-•	Add customer demographic data for advanced segmentation
-•	Automate the full pipeline using Airflow or Prefect
+## 10.Future Enhancements
+•	Build Power BI/Tableau dashboards for visualization<br>
+•	Add customer demographic data for advanced segmentation<br>
+•	Automate the full pipeline using Airflow or Prefect<br>
 
 
 
