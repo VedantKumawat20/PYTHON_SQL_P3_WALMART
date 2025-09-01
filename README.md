@@ -83,11 +83,11 @@ This is the core data cleaning and preprocessing stage, performed within the pan
 **• Data Exploration:** Initial checks are performed using `df.shape`, `df.head()`, `df.describe()`, and `df.info()` to understand the data's structure, identify missing values, duplicates, and incorrect data types.<br>
 
 **• Process:**
-  - Duplicate Handling: The `df.duplicated().sum()` command identifies 51 duplicate rows. These duplicates are removed using `df.drop_duplicates(inplace=True)`, which updates the DataFrame directly.<br>
-  -	Missing Value Handling: `df.isnull().sum()` is used to count missing values. Rows with missing data are dropped with `df.dropna(inplace=True)`. This action reduces the total number of rows from 10,000 to 9,969.<br>
-  -	Data Type Conversion: The unit_price column is initially of an object data type because it contains the $ symbol. To perform calculations, this column needs to be converted to a numerical type. The $ symbol is removed using `df['unit_price'].str.replace('$', '')` and then the column is converted to a float64 data type using `.astype(float)`.<br>
-  -	Feature Engineering: A new column named total is created by multiplying the unit_price and quantity columns `(df['total'] = df['unit_price'] * df['quantity'])`. This new column represents the total amount of each transaction and is crucial for sales analysis.<br>
-  -	Final Check: The `df.info()` and `df.shape` commands are used to verify that the transformations were successful, confirming that data types are correct and no more duplicates or missing values exist.<br>
+  - Duplicate Handling:  The `df.duplicated().sum()` command identifies 51 duplicate rows. These duplicates are removed using `df.drop_duplicates(inplace=True)`, which updates the DataFrame directly.<br>
+  -	Missing Value Handling:  `df.isnull().sum()` is used to count missing values. Rows with missing data are dropped with `df.dropna(inplace=True)`. This action reduces the total number of rows from 10,000 to 9,969.<br>
+  -	Data Type Conversion:  The unit_price column is initially of an object data type because it contains the $ symbol. To perform calculations, this column needs to be converted to a numerical type. The $ symbol is removed using `df['unit_price'].str.replace('$', '')` and then the column is converted to a float64 data type using `.astype(float)`.<br>
+  -	Feature Engineering:  A new column named total is created by multiplying the unit_price and quantity columns `(df['total'] = df['unit_price'] * df['quantity'])`. This new column represents the total amount of each transaction and is crucial for sales analysis.<br>
+  -	Final Check:  The `df.info()` and `df.shape` commands are used to verify that the transformations were successful, confirming that data types are correct and no more duplicates or missing values exist.<br>
 ________________________________________
 3. Load (Final)
    
@@ -95,8 +95,13 @@ In this final step, the cleaned and transformed data is loaded into a persistent
 
 **• Objective:** To export the cleaned and transformed data from the Python environment into a relational database for further analysis using SQL.<br>
 
-**• Process:**<br>
-  - Dependencies: The pymysql and SQLAlchemy libraries are imported. pymysql acts as an adapter, while SQLAlchemy's create_engine function provides a standardized way to connect to a MySQL database.<br>
-  - Database Connection: A connection engine is created to link Python to the MySQL database. The connection string is formatted as `mysql+pymysql://<username>:<password>@<host>:<port>/<database>`. Special characters in the password, like @, must be URL-encoded (%40).<br>
-  - Data Loading: The `df.to_sql()` method is used to export the DataFrame to a SQL table. The parameters `name='walmart'`, `con=engine_mysql`, and `if_exists='append'` are specified. This command creates a new table named walmart in the MySQL database and populates it with the cleaned data.<br>
-  - Final Export: As a final step, the cleaned data is also saved to a local CSV file named walmart_clean_data.csv using `df.to_csv('walmart_clean_data.csv', index=False)` as a backup.<br>
+**• Process:**
+  - Dependencies:  The pymysql and SQLAlchemy libraries are imported. pymysql acts as an adapter, while SQLAlchemy's create_engine function provides a standardized way to connect to a MySQL database.<br>
+  - Database Connection:  A connection engine is created to link Python to the MySQL database. The connection string is formatted as `mysql+pymysql://<username>:<password>@<host>:<port>/<database>`. Special characters in the password, like @, must be URL-encoded (%40).<br>
+  - Data Loading:  The `df.to_sql()` method is used to export the DataFrame to a SQL table. The parameters `name='walmart'`, `con=engine_mysql`, and `if_exists='append'` are specified. This command creates a new table named walmart in the MySQL database and populates it with the cleaned data.<br>
+  - Final Export:  As a final step, the cleaned data is also saved to a local CSV file named walmart_clean_data.csv using `df.to_csv('walmart_clean_data.csv', index=False)` as a backup.<br>
+
+
+🗃️ 8. Data Structure Overview
+<img width="227" height="374" alt="image" src="https://github.com/user-attachments/assets/685e6dd3-e018-48e6-bc77-9ebc3b90e3b0" />
+
