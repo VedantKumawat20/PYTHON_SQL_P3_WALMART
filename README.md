@@ -1,7 +1,7 @@
 # PYTHON_SQL_P3_WALMART
 Data Analysis Project 3  (Python) (SQL)
 
-# 📌 1. Background and Overview
+# 1. Background and Objective
 This project builds a complete data analytics workflow—from pulling real-world data using the Kaggle API, preprocessing and performing EDA in Python, to solving business problems using SQL.
 We work with the Walmart 10K Sales dataset, analyze it in Python, and load it into MySQL/PostgreSQL for deeper query-based insights.
 
@@ -22,23 +22,25 @@ To build an end-to-end data analytics pipeline using Python and SQL:
 •	Solve critical business problems with SQL -- The goal is to deliver actionable insights that support growth, efficiency, and data-driven decision-making.
 •	Prepare and publish the project with full documentation
 
-# 🗂 2. Problem Statement   
+
+# 2. Problem Statement   
 The business collects large volumes of sales and customer data across branches, cities, and categories, but key insights remain hidden. This analysis aims to uncover patterns in payment methods, sales performance, customer ratings, profitability, and revenue trends over time, while also addressing city-level behavior, branch comparisons, and data integrity issues.
 
 
-
-🧠 3. AIMS Grid
+#3. AIMS Grid
 Aim:  Understand sales trends, performance, and customer behavior
 Inputs: Walmart sales dataset from Kaggle (~10K rows)
 Mechanism:	Python (EDA) → MySQL (Advance Analytics)
 Success:	Business questions answered with clear insights and documentation
 
-🔗 4. Data Sources
+
+#5. Data Sources
 •	Dataset: Kaggle - Walmart 10K Sales Dataset
 •	Downloaded using: kaggle.exe datasets download -d najir0123/walmart-10k-sales-datasets
 •	File: Walmart.csv (~10,000 rows)
 
-🧰 5. Tools and Libraries
+
+#6. Tools and Libraries
 Python Environment:
 •	Jupyter Notebook / VS Code
 •	Python 3.8+
@@ -51,9 +53,9 @@ RDBMS/ database:
 •	MySQL
 
 
-⚙️ 6. ELT Pipeline (Extract, Load, Transform)
+#7. ELT Pipeline (Extract, Load, Transform)
 
-🧩 Step-by-Step
+Step-by-Step
 1.	Extract → via Kaggle API
 2.	Load → Unzip + load into Pandas
 3.	Transform → Cleaning + Feature Engineering
@@ -102,12 +104,12 @@ In this final step, the cleaned and transformed data is loaded into a persistent
   - Final Export:  As a final step, the cleaned data is also saved to a local CSV file named walmart_clean_data.csv using `df.to_csv('walmart_clean_data.csv', index=False)` as a backup.<br>
 
 
-🗃️ 8. Data Structure Overview
+#8. Data Structure Overview
 <br>
 <img width="227" height="374" alt="image" src="https://github.com/user-attachments/assets/685e6dd3-e018-48e6-bc77-9ebc3b90e3b0" />
 
 
-🧠 9. SQL Analysis & Business Problem Solving  ( ADVANCE ANALYSIS )
+#9. SQL Analysis & Business Problem Solving  ( ADVANCE ANALYSIS )
 
 - **Change-over-Time Analysis**
 (Deals with trends, growth, increases/decreases across time)<BR>
@@ -156,4 +158,20 @@ Q21: Unique customer count per city<BR>
 (Predefined summaries for business users)<BR>
 
 Q16: Monthly Report Summary<BR>
+
+
+
+#10. Limitations
+•	Data lacks timestamp granularity (no hour/minute info)
+•	Only 10,000 rows — not scalable for predictive modeling
+•	Missing customer demographic fields
+•	2019 data missing. Only 3 months data. 1st 3 or last 3
+
+
+#11.Future Enhancements
+•	Build Power BI/Tableau dashboards for visualization
+•	Add customer demographic data for advanced segmentation
+•	Automate the full pipeline using Airflow or Prefect
+
+
 
