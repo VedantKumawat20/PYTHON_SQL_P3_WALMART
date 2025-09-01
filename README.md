@@ -103,5 +103,63 @@ In this final step, the cleaned and transformed data is loaded into a persistent
 
 
 🗃️ 8. Data Structure Overview
+<br>
 <img width="227" height="374" alt="image" src="https://github.com/user-attachments/assets/685e6dd3-e018-48e6-bc77-9ebc3b90e3b0" />
+
+
+🧠 9. SQL Analysis & Business Problem Solving  ( ADVANCE ANALYSIS )
+
+1. 🔄 Change-over-Time Analysis
+
+(Deals with trends, growth, increases/decreases across time)
+
+Q9: Identify the 5 branches with the highest revenue decrease/increase ratio from 2022 → 2023
+Q10: Total revenue in each year and month
+Q11: Maximum & minimum total revenue in each month of years
+Q11.2: Maximum & minimum total profit_margin in each month of years
+Q14: Moving Average of Daily Sales (7-day window)
+Q19: Total revenue from sales — all cities, quarter-wise and year-wise
+Q21: Monthly sales growth — with percentage change
+
+2. 📈 Cumulative Analysis
+
+(Tracking totals or running sums over time/entities)
+
+Q15: Cumulative Customer Count by City
+
+3. ⚡ Performance Analysis
+
+(Comparing efficiency, profitability, quality, highs/lows, etc.)
+Q2: Identify the highest-rated category in each branch + highest-rated overall
+Q2.2: Highest-rated category count
+Q3: Identify the busiest day for each branch based on number of transactions
+Q5: Average, minimum, and maximum rating of categories for each city
+Q6: Total profit for each category (ordered highest → lowest)
+Q7: Most common payment method for each branch
+Q11 & Q11.2 (also fit here since they evaluate max/min performance across time)
+Q16: High vs Low-Rated Transactions
+Q18: Revenue vs Profit Margin Matrix (Branch × Category)
+Q20: Each city – avg sale per customer & avg rating per customer
+
+4. 🥧 Part-to-Whole Analysis
+
+(How pieces contribute to totals — proportions, shares, breakdowns)
+
+Q1: Find different payment methods, number of transactions, and quantity sold by payment method
+
+5. 🧩 Data Segmentation
+
+(Slicing data into groups like city, branch, category, etc.)
+
+Q8: Categorize sales into Morning, Afternoon, and Evening shifts
+Q12: Top 5 cities with most orders in last 30 days
+Q13: Finding duplicates — cities are 98 but branches are 100
+Q20: Avg sale per customer & avg rating per customer (city-level)
+Q23: Unique customer count per city
+
+6. 📝 Reporting
+
+(Predefined summaries for business users)
+
+Q17: Monthly Report Summary
 
