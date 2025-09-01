@@ -64,7 +64,7 @@ Success:	Business questions answered with clear insights and documentation<br>
 
 This phase involves setting up the environment and retrieving the raw data.<br>
 
-- **Objective:**<br> To pull the raw data from its source into a working environment.<br>
+- **Objective:** To pull the raw data from its source into a working environment.<br>
   • In terminal writing to download dataset –-  `kaggle datasets download -d najir0123/walmart-10k-sales-datasets` <br>
   • error : kaggle : The term 'kaggle' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.<br> 
   • Solved: `kaggle.exe datasets download -d najir0123/walmart-10k-sales-datasets`<br>
@@ -79,11 +79,11 @@ ________________________________________
    
 This is the core data cleaning and preprocessing stage, performed within the pandas DataFrame.<br>
 
-**- Objective:** To clean the data by handling missing values, duplicates, and incorrect data types, and to create new features for analysis.<br>
+- **Objective:** To clean the data by handling missing values, duplicates, and incorrect data types, and to create new features for analysis.<br>
 
-**- Data Exploration:** Initial checks are performed using `df.shape`, `df.head()`, `df.describe()`, and `df.info()` to understand the data's structure, identify missing values, duplicates, and incorrect data types.<br>
+- **Data Exploration:** Initial checks are performed using `df.shape`, `df.head()`, `df.describe()`, and `df.info()` to understand the data's structure, identify missing values, duplicates, and incorrect data types.<br>
 
-**- Process:**
+- **Process:**
   • Duplicate Handling:  The `df.duplicated().sum()` command identifies 51 duplicate rows. These duplicates are removed using `df.drop_duplicates(inplace=True)`, which updates the DataFrame directly.<br>
   •	Missing Value Handling:  `df.isnull().sum()` is used to count missing values. Rows with missing data are dropped with `df.dropna(inplace=True)`. This action reduces the total number of rows from 10,000 to 9,969.<br>
   •	Data Type Conversion:  The unit_price column is initially of an object data type because it contains the $ symbol. To perform calculations, this column needs to be converted to a numerical type. The $ symbol is removed using `df['unit_price'].str.replace('$', '')` and then the column is converted to a float64 data type using `.astype(float)`.<br>
@@ -94,9 +94,9 @@ ________________________________________
    
 In this final step, the cleaned and transformed data is loaded into a persistent storage system for long-term use and analysis.<br>
 
-**- Objective:** To export the cleaned and transformed data from the Python environment into a relational database for further analysis using SQL.<br>
+- **Objective:** To export the cleaned and transformed data from the Python environment into a relational database for further analysis using SQL.<br>
 
-**- Process:**
+- **Process:**
   • Dependencies:  The pymysql and SQLAlchemy libraries are imported. pymysql acts as an adapter, while SQLAlchemy's create_engine function provides a standardized way to connect to a MySQL database.<br>
   • Database Connection:  A connection engine is created to link Python to the MySQL database. The connection string is formatted as `mysql+pymysql://<username>:<password>@<host>:<port>/<database>`. Special characters in the password, like @, must be URL-encoded (%40).<br>
   • Data Loading:  The `df.to_sql()` method is used to export the DataFrame to a SQL table. The parameters `name='walmart'`, `con=engine_mysql`, and `if_exists='append'` are specified. This command creates a new table named walmart in the MySQL database and populates it with the cleaned data.<br>
