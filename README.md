@@ -110,23 +110,24 @@ In this final step, the cleaned and transformed data is loaded into a persistent
 🧠 9. SQL Analysis & Business Problem Solving  ( ADVANCE ANALYSIS )
 
 - 🔄 Change-over-Time Analysis
-(Deals with trends, growth, increases/decreases across time)
+(Deals with trends, growth, increases/decreases across time)<BR>
 
-Q8: Identify the 5 branches with the highest revenue decrease/increase ratio from 2022 → 2023
-Q9: Total revenue in each year and month (Year-on-year and month-on-month revenue trends)
-Q10: Maximum & minimum total revenue in each month of years (Seasonal highs and lows)
-Q10.2: Maximum & minimum total profit_margin in each month of years
-Q13: Moving Average of Daily Sales (7-day window) (Smoothing daily fluctuation to detect trends)
-Q18: Total revenue from sales — all cities, quarter-wise and year-wise
-Q20: Monthly sales growth — with percentage change
+Q8: Identify the 5 branches with the highest revenue decrease/increase ratio from 2022 → 2023<BR>
+Q9: Total revenue in each year and month (Year-on-year and month-on-month revenue trends)<BR>
+Q10: Maximum & minimum total revenue in each month of years (Seasonal highs and lows)<BR>
+Q10.2: Maximum & minimum total profit_margin in each month of years<BR>
+Q13: Moving Average of Daily Sales (7-day window) (Smoothing daily fluctuation to detect trends)<BR>
+Q18: Total revenue from sales — all cities, quarter-wise and year-wise<BR>
+Q20: Monthly sales growth — with percentage change<BR>
 
 - 📈 Cumulative Analysis
-(Tracking totals or running sums over time/entities)
+(Tracking totals or running sums over time/entities)<BR>
 
 Q14: Cumulative Customer Count by City
 
 - ⚡ Performance Analysis
-(Comparing efficiency, profitability, quality, highs/lows, etc.)
+(Comparing efficiency, profitability, quality, highs/lows, etc.)<BR>
+
 Q2: Identify the highest-rated category in each branch + highest-rated overall<BR>
 Q2.2: Highest-rated category count<BR>
 Q3: Identify the busiest day for each branch based on number of transactions<BR>
@@ -139,20 +140,20 @@ Q17: Revenue vs Profit Margin Matrix (Branch × Category)<BR>
 Q19: Each city – avg sale per customer & avg rating per customer<BR>
 
 - 🥧 Part-to-Whole Analysis
-(How pieces contribute to totals — proportions, shares, breakdowns)
+(How pieces contribute to totals — proportions, shares, breakdowns)<BR>
 
-Q1: Find different payment methods, number of transactions, and quantity sold by payment method
+Q1: Find different payment methods, number of transactions, and quantity sold by payment method<BR>
 
 - 🧩 Data Segmentation
-(Slicing data into groups like city, branch, category, etc.)
+(Slicing data into groups like city, branch, category, etc.)<BR>
 
-Q7: Categorize sales into Morning, Afternoon, and Evening shifts
-Q11: Top 5 cities with most orders in last 30 days
-Q12: Finding duplicates — cities are 98 but branches are 100
-Q21: Unique customer count per city
+Q7: Categorize sales into Morning, Afternoon, and Evening shifts<BR>
+Q11: Top 5 cities with most orders in last 30 days<BR>
+Q12: Finding duplicates — cities are 98 but branches are 100<BR>
+Q21: Unique customer count per city<BR>
 
 - 📝 Reporting
-(Predefined summaries for business users)
+(Predefined summaries for business users)<BR>
 
-Q16: Monthly Report Summary
+Q16: Monthly Report Summary<BR>
 
