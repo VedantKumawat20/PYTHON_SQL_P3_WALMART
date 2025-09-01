@@ -42,15 +42,15 @@ Success:	Business questions answered with clear insights and documentation<br>
 
 ## 5. Tools and Libraries
 ### Python Environment:<br>
-•	Jupyter Notebook / VS Code<br>
-•	Python 3.8+<br>
-•	Libraries:<br>
-  - pandas<br>
-  - sqlalchemy<br>
-  - pymysql<br>
-  - kaggle (API)<br>
+- Jupyter Notebook / VS Code<br>
+- Python 3.8+<br>
+- Libraries:<br>
+    • pandas<br>
+    • sqlalchemy<br>
+    • pymysql<br>
+    • kaggle (API)<br>
 ### RDBMS/ database:<br>
-•	MySQL
+- MySQL
 
 
 ## 6. ELT Pipeline (Extract, Load, Transform)
