@@ -72,8 +72,8 @@ Success:	Business questions answered with clear insights and documentation<br>
 
 ### Step-by-Step<br>
   1.	Extract → via Kaggle API<br>
-  2.	Load → Unzip + load into Pandas<br>
-  3.	Transform → Cleaning + Feature Engineering<br>
+  2.	Transform → Data Munging (including Wrangling) to prepare the dataset for advanced SQL analysis.
+  3.	Load → Push the processed data into a MySQL Workbench database.
 
 ### 1. Extract & Load
 
